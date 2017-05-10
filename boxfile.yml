@@ -1,0 +1,20 @@
+run.config:  
+  engine: elixir
+  extra_packages:
+    - nodejs
+  dev_packages:
+    - inotify-tools
+  cache_dirs:
+    - node_modules
+  extra_path_dirs:
+    - node_modules/.bin
+  fs_watch: true
+
+data.db:  
+  image: nanobox/postgresql:9.5
+
+web.site:  
+  start: mix phoenix.server
+  log_watch:
+    erl[crash]: '/app/erl_crash.dump'
+
