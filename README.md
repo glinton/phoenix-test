@@ -3,13 +3,13 @@
 ## Installation instructions/logs (how this repo was created)
 
 #### Create and cd into work directory
-```
+```sh
 mkdir -p ~/src/phoenix-vue
 cd ~/src/phoenix-vue
 ```
 
 #### Create the boxfile
-```
+```sh
 cat > boxfile.yml <<'EOF'
 run.config:  
   engine: elixir
@@ -32,12 +32,12 @@ EOF
 ```
 
 #### Add the dns entry
-```
+```sh
 nanobox dns add local phoenix-vue.dev
 ```
 
 #### Install and configure phoenix
-```
+```sh
 nanobox run
 mix archive.install https://github.com/phoenixframework/archives/raw/master/phoenix_new.ez
 cd /tmp
@@ -162,7 +162,7 @@ mix phoenix.server
 ```
 
 #### Link local work directory to app on nanobox and deploy
-```
+```sh
 nanobox remote add my-phoenix
 nanobox deploy
 ```
@@ -170,7 +170,10 @@ nanobox deploy
 ### DISCLAIMER
 While I intend on following all best practices, I am in no way an elixir/phoenix developer and may make mistakes. I make no guarantee as to the condition of this guide.
 
->Phoenix generated readme
+
+---------------
+
+Phoenix generated README
 >```md
 ># App
 >
